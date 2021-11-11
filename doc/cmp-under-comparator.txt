@@ -1,0 +1,74 @@
+*cmp-under-comparator.txt* completetion comparator for items with underline for nvim-cmp
+
+
+Author: Lukas Reineke <lukas.reineke@protonmail.com>
+Version: 1.0.1
+
+==============================================================================
+CONTENTS                                                *cmp-under-comparator*
+
+  1. Setup                                 |cmp-under-comparator-setup|
+  2. Changelog                             |cmp-under-comparator-changelog|
+  3. License                               |cmp-under-comparator-license|
+
+==============================================================================
+ 1. SETUP                                         *cmp-under-comparator-setup*
+
+    Add the `under` function to the list of comparators in the cmp setup
+    function.
+    >
+        local cmp = require "cmp"
+        cmp.setup {
+            -- ... rest of your setup ...
+
+            sorting = {
+                comparators = {
+                    cmp.config.compare.offset,
+                    cmp.config.compare.exact,
+                    cmp.config.compare.score,
+                    require "cmp-under-comparator".under,
+                    cmp.config.compare.kind,
+                    cmp.config.compare.sort_text,
+                    cmp.config.compare.length,
+                    cmp.config.compare.order,
+                },
+            },
+        }
+
+==============================================================================
+ 2. CHANGELOG                                 *cmp-under-comparator-changelog*
+
+1.0.1
+  * Add vim documentation
+
+1.0.0
+  * First release
+
+==============================================================================
+ 3. LICENSE                                     *cmp-under-comparator-license*
+
+The MIT Licence
+http://www.opensource.ounder-comparator/licenses/mit-license.php
+
+Copyright (c) 2021 Lukas Reineke
+
+Permission is hereby granted, free of chaunder-comparatore, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, meunder-comparatore, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl
